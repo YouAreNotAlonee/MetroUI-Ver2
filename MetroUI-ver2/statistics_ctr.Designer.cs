@@ -33,8 +33,12 @@
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.metroButton3 = new MetroFramework.Controls.MetroButton();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // metroListView1
@@ -54,7 +58,7 @@
             this.panel1.Controls.Add(this.metroButton1);
             this.panel1.Controls.Add(this.metroButton3);
             this.panel1.Controls.Add(this.metroListView1);
-            this.panel1.Location = new System.Drawing.Point(26, 19);
+            this.panel1.Location = new System.Drawing.Point(96, 21);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(260, 511);
             this.panel1.TabIndex = 17;
@@ -71,7 +75,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::MetroUI_ver2.Properties.Resources.dashboard;
-            this.pictureBox1.Location = new System.Drawing.Point(465, 33);
+            this.pictureBox1.Location = new System.Drawing.Point(465, 21);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(105, 113);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -91,17 +95,41 @@
             this.metroButton3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.metroButton3.UseSelectable = true;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::MetroUI_ver2.Properties.Resources.dashboard;
+            this.pictureBox2.Location = new System.Drawing.Point(465, 172);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(105, 113);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox2.TabIndex = 19;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::MetroUI_ver2.Properties.Resources.dashboard;
+            this.pictureBox3.Location = new System.Drawing.Point(465, 321);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(105, 113);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox3.TabIndex = 20;
+            this.pictureBox3.TabStop = false;
+            // 
             // statistics_ctr
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.Name = "statistics_ctr";
             this.Size = new System.Drawing.Size(1000, 550);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -113,5 +141,7 @@
         private System.Windows.Forms.Panel panel1;
         private MetroFramework.Controls.MetroButton metroButton1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
