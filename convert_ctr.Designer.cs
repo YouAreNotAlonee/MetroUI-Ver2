@@ -36,7 +36,8 @@
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.convertButton = new MetroFramework.Controls.MetroButton();
+            this.listButton = new MetroFramework.Controls.MetroButton();
             this.SuspendLayout();
             // 
             // metroListView1
@@ -123,21 +124,31 @@
             this.metroLabel4.TabIndex = 7;
             this.metroLabel4.Text = "Picture";
             // 
-            // metroButton1
+            // convertButton
             // 
-            this.metroButton1.Location = new System.Drawing.Point(461, 505);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(75, 23);
-            this.metroButton1.TabIndex = 8;
-            this.metroButton1.Text = "Convert";
-            this.metroButton1.UseSelectable = true;
+            this.convertButton.Location = new System.Drawing.Point(645, 505);
+            this.convertButton.Name = "convertButton";
+            this.convertButton.Size = new System.Drawing.Size(75, 23);
+            this.convertButton.TabIndex = 8;
+            this.convertButton.Text = "변환";
+            this.convertButton.UseSelectable = true;
+            // 
+            // listButton
+            // 
+            this.listButton.Location = new System.Drawing.Point(408, 505);
+            this.listButton.Name = "listButton";
+            this.listButton.Size = new System.Drawing.Size(75, 23);
+            this.listButton.TabIndex = 9;
+            this.listButton.Text = "불러오기";
+            this.listButton.UseSelectable = true;
             // 
             // convert_ctr
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.metroButton1);
+            this.Controls.Add(this.listButton);
+            this.Controls.Add(this.convertButton);
             this.Controls.Add(this.metroLabel4);
             this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.metroLabel2);
@@ -163,6 +174,7 @@
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroLabel metroLabel4;
-        private MetroFramework.Controls.MetroButton metroButton1;
+        private MetroFramework.Controls.MetroButton convertButton;
+        private MetroFramework.Controls.MetroButton listButton;
     }
 }
