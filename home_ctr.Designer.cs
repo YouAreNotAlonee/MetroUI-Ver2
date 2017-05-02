@@ -184,7 +184,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 6;
-            this.button1.Text = "button1";
+            this.button1.Text = "스레드정지";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -202,6 +202,7 @@
             this.Name = "home_ctr";
             this.Size = new System.Drawing.Size(1000, 550);
             this.Load += new System.EventHandler(this.home_ctr_Load);
+            this.Leave += new System.EventHandler(this.home_ctr_Leave);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

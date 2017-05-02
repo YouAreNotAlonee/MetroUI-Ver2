@@ -126,7 +126,7 @@
             // 
             // convertButton
             // 
-            this.convertButton.Location = new System.Drawing.Point(645, 505);
+            this.convertButton.Location = new System.Drawing.Point(584, 505);
             this.convertButton.Name = "convertButton";
             this.convertButton.Size = new System.Drawing.Size(75, 23);
             this.convertButton.TabIndex = 8;
@@ -135,12 +135,13 @@
             // 
             // listButton
             // 
-            this.listButton.Location = new System.Drawing.Point(408, 505);
+            this.listButton.Location = new System.Drawing.Point(347, 505);
             this.listButton.Name = "listButton";
             this.listButton.Size = new System.Drawing.Size(75, 23);
             this.listButton.TabIndex = 9;
             this.listButton.Text = "불러오기";
             this.listButton.UseSelectable = true;
+            this.listButton.Click += new System.EventHandler(this.listButton_Click);
             // 
             // convert_ctr
             // 

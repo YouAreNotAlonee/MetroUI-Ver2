@@ -30,7 +30,7 @@
         {
             this.metroListView1 = new MetroFramework.Controls.MetroListView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.analysisBtn = new MetroFramework.Controls.MetroButton();
             this.listButton = new MetroFramework.Controls.MetroButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -56,7 +56,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.metroButton1);
+            this.panel1.Controls.Add(this.analysisBtn);
             this.panel1.Controls.Add(this.listButton);
             this.panel1.Controls.Add(this.metroListView1);
             this.panel1.Location = new System.Drawing.Point(96, 21);
@@ -64,14 +64,15 @@
             this.panel1.Size = new System.Drawing.Size(260, 511);
             this.panel1.TabIndex = 17;
             // 
-            // metroButton1
+            // analysisBtn
             // 
-            this.metroButton1.Location = new System.Drawing.Point(167, 440);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(75, 23);
-            this.metroButton1.TabIndex = 18;
-            this.metroButton1.Text = "분석";
-            this.metroButton1.UseSelectable = true;
+            this.analysisBtn.Location = new System.Drawing.Point(167, 440);
+            this.analysisBtn.Name = "analysisBtn";
+            this.analysisBtn.Size = new System.Drawing.Size(75, 23);
+            this.analysisBtn.TabIndex = 18;
+            this.analysisBtn.Text = "분석";
+            this.analysisBtn.UseSelectable = true;
+            this.analysisBtn.Click += new System.EventHandler(this.analysisBtn_Click);
             // 
             // listButton
             // 
@@ -142,7 +143,7 @@
         private MetroFramework.Controls.MetroListView metroListView1;
         private MetroFramework.Controls.MetroButton listButton;
         private System.Windows.Forms.Panel panel1;
-        private MetroFramework.Controls.MetroButton metroButton1;
+        private MetroFramework.Controls.MetroButton analysisBtn;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;

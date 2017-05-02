@@ -9,35 +9,33 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.Threading;
+using System.Runtime.InteropServices;
+
+using Microsoft.DirectX.AudioVideoPlayback;
+using Microsoft.DirectX.Direct3D;
+using OpenCvSharp;
+
+
+
+using static MetroUI_ver2.player_ctr;
+
+
 
 namespace MetroUI_ver2
 {
-    public partial class Form1 : MetroFramework.Forms.MetroForm
+
+    public unsafe partial class Form1 : MetroFramework.Forms.MetroForm
     {
-
-
-        private PerformanceCounter cpu =
-            new PerformanceCounter("Processor", "% Processor Time", "_Total");
-
-        private PerformanceCounter ram = new PerformanceCounter("Memory", "Available MBytes");
-
-        string process_name = Process.GetCurrentProcess().ProcessName;
-
-        private PerformanceCounter prcess_cpu =
-            new PerformanceCounter("Process", "% Processor Time", Process.GetCurrentProcess().ProcessName);
-
-        private bool loop_state = true;
-
+       
+        
         public Form1()
         {
-            
             InitializeComponent();
-
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
 
         }
 
@@ -58,7 +56,8 @@ namespace MetroUI_ver2
             setting_ctr1.Visible = false;
             convert_ctr1.Visible = false;
             statistics_ctr1.Visible = false;
-        }
+           
+         }
 
         private void converBtn_Click(object sender, EventArgs e)
         {

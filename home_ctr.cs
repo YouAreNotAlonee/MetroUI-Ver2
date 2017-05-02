@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.Diagnostics;
 using System.Threading;
 
+
 namespace MetroUI_ver2
 {
     public partial class home_ctr : UserControl
@@ -27,13 +28,19 @@ namespace MetroUI_ver2
 
 
 
-       
         private bool loop_state = true;
 
+        
 
+
+
+        
         public home_ctr()
         {
             InitializeComponent();
+
+            
+
             DriveInfo[] drv = DriveInfo.GetDrives();
             foreach (DriveInfo d in drv )
             {
@@ -44,9 +51,6 @@ namespace MetroUI_ver2
             }
         }
 
-    
-
-
 
         private void home_ctr_Load(object sender, EventArgs e)
         {
@@ -54,9 +58,10 @@ namespace MetroUI_ver2
             my_thread.Start();
         }
 
-
         private void check_system()
         {
+            
+
             do
             {
                 if (this.InvokeRequired)
@@ -80,14 +85,19 @@ namespace MetroUI_ver2
                     //this.metroLabel4.Text =
                     //    process_name + " cpu 사용 : " + prcess_cpu.NextValue().ToString() + " %";
                 }
-                Thread.Sleep(1000);
+                Thread.Sleep(3000);
             } while (loop_state);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             loop_state = false;  // for worker thread exit....
+            
+        }
 
+        private void home_ctr_Leave(object sender, EventArgs e)
+        {
+            loop_state = false;  // for worker thread exit....
         }
     }
 }

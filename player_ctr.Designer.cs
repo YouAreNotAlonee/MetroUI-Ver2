@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
@@ -37,9 +38,15 @@
             this.metroTrackBar3 = new MetroFramework.Controls.MetroTrackBar();
             this.metroToggle1 = new MetroFramework.Controls.MetroToggle();
             this.metroToggle2 = new MetroFramework.Controls.MetroToggle();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
-            this.metroButton3 = new MetroFramework.Controls.MetroButton();
+            this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
+            this.listTab = new MetroFramework.Controls.MetroTabPage();
+            this.metroListView1 = new MetroFramework.Controls.MetroListView();
+            this.listBtn = new MetroFramework.Controls.MetroButton();
+            this.mapTab = new MetroFramework.Controls.MetroTabPage();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.mapBtn = new MetroFramework.Controls.MetroButton();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.metroButton2 = new MetroFramework.Controls.MetroButton();
             this.updownBtn = new MetroFramework.Controls.MetroButton();
             this.leftrightBtn = new MetroFramework.Controls.MetroButton();
             this.volumeBtn = new MetroFramework.Controls.MetroButton();
@@ -47,12 +54,7 @@
             this.stopBtn = new MetroFramework.Controls.MetroButton();
             this.playBtn = new MetroFramework.Controls.MetroButton();
             this.backBtn = new MetroFramework.Controls.MetroButton();
-            this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
-            this.listTab = new MetroFramework.Controls.MetroTabPage();
-            this.metroListView1 = new MetroFramework.Controls.MetroListView();
-            this.mapTab = new MetroFramework.Controls.MetroTabPage();
-            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.metroTabControl1.SuspendLayout();
             this.listTab.SuspendLayout();
             this.mapTab.SuspendLayout();
@@ -115,28 +117,90 @@
             this.metroToggle2.Text = "Off";
             this.metroToggle2.UseSelectable = true;
             // 
-            // metroButton2
+            // metroTabControl1
             // 
-            this.metroButton2.BackgroundImage = global::MetroUI_ver2.Properties.Resources.download;
-            this.metroButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.metroButton2.Location = new System.Drawing.Point(725, 493);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(35, 35);
-            this.metroButton2.TabIndex = 16;
-            this.metroButton2.UseSelectable = true;
+            this.metroTabControl1.Controls.Add(this.listTab);
+            this.metroTabControl1.Controls.Add(this.mapTab);
+            this.metroTabControl1.Location = new System.Drawing.Point(718, 16);
+            this.metroTabControl1.Name = "metroTabControl1";
+            this.metroTabControl1.SelectedIndex = 0;
+            this.metroTabControl1.Size = new System.Drawing.Size(275, 475);
+            this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Black;
+            this.metroTabControl1.TabIndex = 17;
+            this.metroTabControl1.UseSelectable = true;
             // 
-            // metroButton3
+            // listTab
             // 
-            this.metroButton3.BackColor = System.Drawing.Color.White;
-            this.metroButton3.BackgroundImage = global::MetroUI_ver2.Properties.Resources.folder;
-            this.metroButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.metroButton3.Location = new System.Drawing.Point(3, 10);
-            this.metroButton3.Name = "metroButton3";
-            this.metroButton3.Size = new System.Drawing.Size(83, 35);
-            this.metroButton3.TabIndex = 15;
-            this.metroButton3.Text = "불러오기";
-            this.metroButton3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.metroButton3.UseSelectable = true;
+            this.listTab.Controls.Add(this.metroListView1);
+            this.listTab.Controls.Add(this.listBtn);
+            this.listTab.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.listTab.HorizontalScrollbarBarColor = true;
+            this.listTab.HorizontalScrollbarHighlightOnWheel = false;
+            this.listTab.HorizontalScrollbarSize = 10;
+            this.listTab.Location = new System.Drawing.Point(4, 38);
+            this.listTab.Name = "listTab";
+            this.listTab.Size = new System.Drawing.Size(267, 433);
+            this.listTab.Style = MetroFramework.MetroColorStyle.Black;
+            this.listTab.TabIndex = 0;
+            this.listTab.Text = "PlayLists";
+            this.listTab.VerticalScrollbarBarColor = true;
+            this.listTab.VerticalScrollbarHighlightOnWheel = false;
+            this.listTab.VerticalScrollbarSize = 10;
+            // 
+            // metroListView1
+            // 
+            this.metroListView1.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.metroListView1.FullRowSelect = true;
+            this.metroListView1.Location = new System.Drawing.Point(3, 49);
+            this.metroListView1.Name = "metroListView1";
+            this.metroListView1.OwnerDraw = true;
+            this.metroListView1.Size = new System.Drawing.Size(261, 372);
+            this.metroListView1.Style = MetroFramework.MetroColorStyle.Black;
+            this.metroListView1.TabIndex = 16;
+            this.metroListView1.UseCompatibleStateImageBehavior = false;
+            this.metroListView1.UseSelectable = true;
+            this.metroListView1.SelectedIndexChanged += new System.EventHandler(this.metroListView1_SelectedIndexChanged);
+            this.metroListView1.DoubleClick += new System.EventHandler(this.metroListView1_DoubleClick);
+            // 
+            // listBtn
+            // 
+            this.listBtn.BackColor = System.Drawing.Color.White;
+            this.listBtn.BackgroundImage = global::MetroUI_ver2.Properties.Resources.folder;
+            this.listBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.listBtn.Location = new System.Drawing.Point(3, 10);
+            this.listBtn.Name = "listBtn";
+            this.listBtn.Size = new System.Drawing.Size(83, 35);
+            this.listBtn.TabIndex = 15;
+            this.listBtn.Text = "불러오기";
+            this.listBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.listBtn.UseSelectable = true;
+            this.listBtn.Click += new System.EventHandler(this.listBtn_Click);
+            // 
+            // mapTab
+            // 
+            this.mapTab.Controls.Add(this.webBrowser1);
+            this.mapTab.Controls.Add(this.mapBtn);
+            this.mapTab.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.mapTab.HorizontalScrollbarBarColor = true;
+            this.mapTab.HorizontalScrollbarHighlightOnWheel = false;
+            this.mapTab.HorizontalScrollbarSize = 10;
+            this.mapTab.Location = new System.Drawing.Point(4, 38);
+            this.mapTab.Name = "mapTab";
+            this.mapTab.Size = new System.Drawing.Size(267, 433);
+            this.mapTab.Style = MetroFramework.MetroColorStyle.Black;
+            this.mapTab.TabIndex = 1;
+            this.mapTab.Text = "Map";
+            this.mapTab.VerticalScrollbarBarColor = true;
+            this.mapTab.VerticalScrollbarHighlightOnWheel = false;
+            this.mapTab.VerticalScrollbarSize = 10;
+            // 
+            // webBrowser1
+            // 
+            this.webBrowser1.Location = new System.Drawing.Point(3, 55);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.Size = new System.Drawing.Size(261, 366);
+            this.webBrowser1.TabIndex = 2;
             // 
             // mapBtn
             // 
@@ -150,6 +214,33 @@
             this.mapBtn.Text = "연결하기";
             this.mapBtn.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.mapBtn.UseSelectable = true;
+            this.mapBtn.Click += new System.EventHandler(this.mapBtn_Click);
+            // 
+            // chart1
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(12, 448);
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(562, 90);
+            this.chart1.TabIndex = 18;
+            this.chart1.Text = "chart1";
+            // 
+            // metroButton2
+            // 
+            this.metroButton2.BackgroundImage = global::MetroUI_ver2.Properties.Resources.download;
+            this.metroButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.metroButton2.Location = new System.Drawing.Point(725, 493);
+            this.metroButton2.Name = "metroButton2";
+            this.metroButton2.Size = new System.Drawing.Size(35, 35);
+            this.metroButton2.TabIndex = 16;
+            this.metroButton2.UseSelectable = true;
             // 
             // updownBtn
             // 
@@ -221,90 +312,6 @@
             this.backBtn.TabIndex = 3;
             this.backBtn.UseSelectable = true;
             // 
-            // metroTabControl1
-            // 
-            this.metroTabControl1.Controls.Add(this.listTab);
-            this.metroTabControl1.Controls.Add(this.mapTab);
-            this.metroTabControl1.Location = new System.Drawing.Point(718, 16);
-            this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 1;
-            this.metroTabControl1.Size = new System.Drawing.Size(275, 475);
-            this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Black;
-            this.metroTabControl1.TabIndex = 17;
-            this.metroTabControl1.UseSelectable = true;
-            // 
-            // listTab
-            // 
-            this.listTab.Controls.Add(this.metroListView1);
-            this.listTab.Controls.Add(this.metroButton3);
-            this.listTab.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.listTab.HorizontalScrollbarBarColor = true;
-            this.listTab.HorizontalScrollbarHighlightOnWheel = false;
-            this.listTab.HorizontalScrollbarSize = 10;
-            this.listTab.Location = new System.Drawing.Point(4, 38);
-            this.listTab.Name = "listTab";
-            this.listTab.Size = new System.Drawing.Size(267, 433);
-            this.listTab.Style = MetroFramework.MetroColorStyle.Black;
-            this.listTab.TabIndex = 0;
-            this.listTab.Text = "PlayLists";
-            this.listTab.VerticalScrollbarBarColor = true;
-            this.listTab.VerticalScrollbarHighlightOnWheel = false;
-            this.listTab.VerticalScrollbarSize = 10;
-            // 
-            // metroListView1
-            // 
-            this.metroListView1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.metroListView1.FullRowSelect = true;
-            this.metroListView1.Location = new System.Drawing.Point(3, 49);
-            this.metroListView1.Name = "metroListView1";
-            this.metroListView1.OwnerDraw = true;
-            this.metroListView1.Size = new System.Drawing.Size(261, 372);
-            this.metroListView1.TabIndex = 16;
-            this.metroListView1.UseCompatibleStateImageBehavior = false;
-            this.metroListView1.UseSelectable = true;
-            // 
-            // mapTab
-            // 
-            this.mapTab.Controls.Add(this.webBrowser1);
-            this.mapTab.Controls.Add(this.mapBtn);
-            this.mapTab.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.mapTab.HorizontalScrollbarBarColor = true;
-            this.mapTab.HorizontalScrollbarHighlightOnWheel = false;
-            this.mapTab.HorizontalScrollbarSize = 10;
-            this.mapTab.Location = new System.Drawing.Point(4, 38);
-            this.mapTab.Name = "mapTab";
-            this.mapTab.Size = new System.Drawing.Size(267, 433);
-            this.mapTab.Style = MetroFramework.MetroColorStyle.Black;
-            this.mapTab.TabIndex = 1;
-            this.mapTab.Text = "Map";
-            this.mapTab.VerticalScrollbarBarColor = true;
-            this.mapTab.VerticalScrollbarHighlightOnWheel = false;
-            this.mapTab.VerticalScrollbarSize = 10;
-            // 
-            // webBrowser1
-            // 
-            this.webBrowser1.Location = new System.Drawing.Point(3, 55);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(261, 266);
-            this.webBrowser1.TabIndex = 2;
-            // 
-            // chart1
-            // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(12, 448);
-            this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(562, 90);
-            this.chart1.TabIndex = 18;
-            this.chart1.Text = "chart1";
-            // 
             // player_ctr
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -353,7 +360,7 @@
         private MetroFramework.Controls.MetroToggle metroToggle1;
         private MetroFramework.Controls.MetroToggle metroToggle2;
         private MetroFramework.Controls.MetroButton metroButton2;
-        private MetroFramework.Controls.MetroButton metroButton3;
+        private MetroFramework.Controls.MetroButton listBtn;
         private MetroFramework.Controls.MetroButton mapBtn;
         private MetroFramework.Controls.MetroTabControl metroTabControl1;
         private MetroFramework.Controls.MetroTabPage listTab;
@@ -361,5 +368,6 @@
         private MetroFramework.Controls.MetroListView metroListView1;
         private System.Windows.Forms.WebBrowser webBrowser1;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.Timer timer1;
     }
 }
